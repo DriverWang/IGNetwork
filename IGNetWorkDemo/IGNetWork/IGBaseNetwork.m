@@ -6,6 +6,13 @@
 //  Copyright © 2016年 ihealth-wyc. All rights reserved.
 //
 
+#ifdef DEBUG
+#define IGLog( s, ... ) NSLog( @"<%@:(%d)> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
+#else
+#define IGLog(...)
+#endif
+
+
 #import "IGBaseNetwork.h"
 #import <AFNetworking.h>
 
@@ -113,10 +120,23 @@ static IGBaseNetwork *_instance;
     
     [self.manager POST:URL parameters:parameter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
+        NSDictionary * response = responseObject;
+        NSString * msg;
+        if (![response[@"ResultMessage"] isEqualToString:@"100"]) {
+        
+            msg =[NSString stringWithFormat:@" (ง •̀_•́)ง %@接口发生外部错误，错误码%@  (｡˘•ε•˘｡) ",URL,response[@"ResultMessage"]];
+        }else{
+            msg =[NSString stringWithFormat:@"(•̀ᴗ•́)و ̑̑%@接口调用成功，恭喜您,其返回内容为%@ (｡˘•ε•˘｡) ",URL,response];
+        }
+
+        IGLog(@"%@",msg);
         successBlock(responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+       
+        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+        NSString * msg =[NSString stringWithFormat:@" (ง •̀_•́)ง %@接口发生外部错误，错误码%ld  (｡˘•ε•˘｡)  ",URL,(long)response.statusCode];
+        IGLog(@"%@",msg);
     }];
 
 }
@@ -125,8 +145,15 @@ static IGBaseNetwork *_instance;
 
     [self POSTRequestWithUrlString:GET_TOKEN parameter:@{@"AppVersion":[self getAppVersion]} success:^(id responseTask) {
         
-        NSDictionary * dict = responseTask;
-        NSString * token = dict[@"ReturnValue"][0][@"AccessToken"];
+        NSDictionary * response = responseTask;
+        IGLog(@"%@",response);
+        
+        if ([response[@"ResultMessage"] isEqualToString:@"223"]) {
+            NSString * msg =[NSString stringWithFormat:@" (ง •̀_•́)ง AppVersion不正确 ,请检查(｡˘•ε•˘｡)  "];
+            IGLog(@"%@",msg);
+        }
+        
+        NSString * token = response[@"ReturnValue"][0][@"AccessToken"];
         [self saveLocalToken:token];
         
         if (success) {
@@ -138,19 +165,12 @@ static IGBaseNetwork *_instance;
 
 - (NSString *)getAppVersion{
    
-//    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-//    CFShow((__bridge CFTypeRef)(infoDictionary));
-
-//    return [NSString stringWithFormat:@"%@+%@",[[NSBundle mainBundle] bundleIdentifier],[infoDictionary objectForKey:@"CFBundleShortVersionString"]];
-
-    return @"123";
+    return [[NSBundle mainBundle] bundleIdentifier];
 }
-
 
 - (NSString *)getLocalToken{
 
     return [[NSUserDefaults standardUserDefaults]objectForKey:LOCAL_TOKEN];
-
 }
 
 - (void)saveLocalToken:(NSString *)token{
