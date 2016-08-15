@@ -121,7 +121,7 @@ static IGBaseNetwork *_instance;
     [self.manager POST:URL parameters:parameter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary * response = responseObject;
-        NSString * msg;
+        NSString * msg = @"";
         if (![response[@"ResultMessage"] isEqualToString:@"100"]) {
         
             msg =[NSString stringWithFormat:@" (ง •̀_•́)ง %@接口发生外部错误，错误码%@  (｡˘•ε•˘｡) ",URL,response[@"ResultMessage"]];
