@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44B776CC2CEE54F3F9F4E311 /* libPods-IGNetWorkDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D91438B00CBD9CFB6C195ECF /* libPods-IGNetWorkDemo.a */; };
 		4ABC8FF91D5D96EE0085CA30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC8FF81D5D96EE0085CA30 /* main.m */; };
 		4ABC8FFC1D5D96EE0085CA30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC8FFB1D5D96EE0085CA30 /* AppDelegate.m */; };
 		4ABC8FFF1D5D96EE0085CA30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC8FFE1D5D96EE0085CA30 /* ViewController.m */; };
@@ -17,7 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		49996DD076DE825F6DDF7D8B /* Pods-IGNetWorkDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGNetWorkDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGNetWorkDemo/Pods-IGNetWorkDemo.release.xcconfig"; sourceTree = "<group>"; };
+		2E42B02C6C75ECB82018998D /* Pods-IGNetWorkDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGNetWorkDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGNetWorkDemo/Pods-IGNetWorkDemo.release.xcconfig"; sourceTree = "<group>"; };
+		464F71A2136FE5F410F03207 /* Pods-IGNetWorkDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGNetWorkDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IGNetWorkDemo/Pods-IGNetWorkDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		4ABC8FF41D5D96EE0085CA30 /* IGNetWorkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGNetWorkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ABC8FF81D5D96EE0085CA30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4ABC8FFA1D5D96EE0085CA30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -30,8 +32,7 @@
 		4ABC90081D5D96EE0085CA30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ABC900F1D5D97BD0085CA30 /* IGBaseNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGBaseNetwork.h; sourceTree = "<group>"; };
 		4ABC90101D5D97BD0085CA30 /* IGBaseNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGBaseNetwork.m; sourceTree = "<group>"; };
-		BB02F9AF19A821C99DE6F500 /* libPods-IGNetWorkDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IGNetWorkDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE0F245410F992A83B062E78 /* Pods-IGNetWorkDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGNetWorkDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IGNetWorkDemo/Pods-IGNetWorkDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D91438B00CBD9CFB6C195ECF /* libPods-IGNetWorkDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IGNetWorkDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,27 +40,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44B776CC2CEE54F3F9F4E311 /* libPods-IGNetWorkDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A38EDD9ED889B517E779BE4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BB02F9AF19A821C99DE6F500 /* libPods-IGNetWorkDemo.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		4ABC8FEB1D5D96EE0085CA30 = {
 			isa = PBXGroup;
 			children = (
 				4ABC8FF61D5D96EE0085CA30 /* IGNetWorkDemo */,
 				4ABC8FF51D5D96EE0085CA30 /* Products */,
-				766C84DB150D0DC8973CFEB2 /* Pods */,
-				1A38EDD9ED889B517E779BE4 /* Frameworks */,
+				DD2CE54D26BE0F6B6E98C3EF /* Pods */,
+				62070DFB1897AC8B938E2510 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,11 +99,19 @@
 			path = IGNetWork;
 			sourceTree = "<group>";
 		};
-		766C84DB150D0DC8973CFEB2 /* Pods */ = {
+		62070DFB1897AC8B938E2510 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EE0F245410F992A83B062E78 /* Pods-IGNetWorkDemo.debug.xcconfig */,
-				49996DD076DE825F6DDF7D8B /* Pods-IGNetWorkDemo.release.xcconfig */,
+				D91438B00CBD9CFB6C195ECF /* libPods-IGNetWorkDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD2CE54D26BE0F6B6E98C3EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				464F71A2136FE5F410F03207 /* Pods-IGNetWorkDemo.debug.xcconfig */,
+				2E42B02C6C75ECB82018998D /* Pods-IGNetWorkDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -121,12 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4ABC900B1D5D96EE0085CA30 /* Build configuration list for PBXNativeTarget "IGNetWorkDemo" */;
 			buildPhases = (
-				D72955F67C7F4E3003803645 /* Check Pods Manifest.lock */,
+				1DF06A6EB0EE4CD0279DAA1F /* [CP] Check Pods Manifest.lock */,
 				4ABC8FF01D5D96EE0085CA30 /* Sources */,
 				4ABC8FF11D5D96EE0085CA30 /* Frameworks */,
 				4ABC8FF21D5D96EE0085CA30 /* Resources */,
-				6D60FBA4AFCE159F868657BC /* Embed Pods Frameworks */,
-				C5F51E8F53BC75E7731B4921 /* Copy Pods Resources */,
+				A3DECFB36659CFB41E1D4A5D /* [CP] Embed Pods Frameworks */,
+				4409A6C1E6AE9D70D16F24FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,29 +185,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6D60FBA4AFCE159F868657BC /* Embed Pods Frameworks */ = {
+		1DF06A6EB0EE4CD0279DAA1F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IGNetWorkDemo/Pods-IGNetWorkDemo-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C5F51E8F53BC75E7731B4921 /* Copy Pods Resources */ = {
+		4409A6C1E6AE9D70D16F24FA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,19 +215,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IGNetWorkDemo/Pods-IGNetWorkDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D72955F67C7F4E3003803645 /* Check Pods Manifest.lock */ = {
+		A3DECFB36659CFB41E1D4A5D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IGNetWorkDemo/Pods-IGNetWorkDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -350,7 +352,7 @@
 		};
 		4ABC900C1D5D96EE0085CA30 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE0F245410F992A83B062E78 /* Pods-IGNetWorkDemo.debug.xcconfig */;
+			baseConfigurationReference = 464F71A2136FE5F410F03207 /* Pods-IGNetWorkDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IGNetWorkDemo/Info.plist;
@@ -363,7 +365,7 @@
 		};
 		4ABC900D1D5D96EE0085CA30 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49996DD076DE825F6DDF7D8B /* Pods-IGNetWorkDemo.release.xcconfig */;
+			baseConfigurationReference = 2E42B02C6C75ECB82018998D /* Pods-IGNetWorkDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IGNetWorkDemo/Info.plist;
