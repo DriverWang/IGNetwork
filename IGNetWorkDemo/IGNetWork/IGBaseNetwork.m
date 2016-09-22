@@ -14,7 +14,8 @@
 
 
 #import "IGBaseNetwork.h"
-#import <AFNetworking.h>
+
+#import <AFNetworking/AFNetworking.h>
 
 #define GET_TOKEN @"/token/getToken"
 #define LOCAL_TOKEN @"LOCAL_TOKEN"

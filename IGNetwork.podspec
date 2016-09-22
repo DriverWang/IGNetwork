@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|  
   s.name             = "IGNetwork"  
-  s.version          = "1.0.4"  
+  s.version          = "1.1.1"  
  s.summary      = " iGluco "
 
   s.homepage         = "https://github.com/DriverWang/IGNetwork"  
