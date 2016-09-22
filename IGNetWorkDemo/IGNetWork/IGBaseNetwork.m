@@ -18,6 +18,8 @@
 
 #define GET_TOKEN @"/token/getToken"
 #define LOCAL_TOKEN @"LOCAL_TOKEN"
+
+
 @interface IGBaseNetwork()
 
 @property (nonatomic,copy) NSString * baseURL;
@@ -165,7 +167,8 @@ static IGBaseNetwork *_instance;
 
 - (NSString *)getAppVersion{
    
-    return [[NSBundle mainBundle] bundleIdentifier];
+    return @"123";
+//    return [[NSBundle mainBundle] bundleIdentifier];
 }
 
 - (NSString *)getLocalToken{
@@ -185,7 +188,10 @@ static IGBaseNetwork *_instance;
     if (!_manager) {
         
         _manager = [AFHTTPSessionManager manager];
-
+        _manager.securityPolicy.allowInvalidCertificates = YES;
+        _manager.securityPolicy.validatesDomainName = NO;
+        _manager.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;;
+       
     }
     return _manager;
 }

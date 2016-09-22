@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [[IGBaseNetwork IGBaseNetworkManager]setUpBaseURL:@"http://120.92.57.192:3000"];
+    [[IGBaseNetwork IGBaseNetworkManager]setUpBaseURL:@"https://120.92.57.192:3001"];
 
     [[IGBaseNetwork IGBaseNetworkManager]POSTRequestWithUrlString:@"/gdh/queryByCountryCode" parameter:@{@"CountryCode":@"CN"} accessTokenIfNeed:NO success:^(id responseTask) {
         
