@@ -140,6 +140,7 @@ static IGBaseNetwork *_instance;
         NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
         NSString * msg =[NSString stringWithFormat:@" (ง •̀_•́)ง %@接口发生外部错误，错误码%ld  (｡˘•ε•˘｡)  ",URL,(long)response.statusCode];
         IGLog(@"%@",msg);
+        failBlock((long)response.statusCode,(long)response.statusCode);
     }];
 
 }
